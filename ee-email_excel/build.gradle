@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':ee-email')
+    compile project(':ee-excel')
+}
