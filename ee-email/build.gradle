@@ -1,4 +1,0 @@
-dependencies {
-    compile project(':ee-common')
-    compile "javax.mail:javax.mail-api:$version_mail"
-}

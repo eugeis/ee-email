@@ -1,7 +1,7 @@
 package ee.email
 
-import ee.dsl.data.*
-import ee.dsl.*
+import ee.design.*
+import ee.lang.*
 
 object EmailDesign : Model({ namespace("ee") }) {
 

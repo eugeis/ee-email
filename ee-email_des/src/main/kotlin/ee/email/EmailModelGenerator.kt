@@ -1,7 +1,7 @@
 package ee.email
 
-import ee.dsl.data.KotlinGenerator
-import ee.dsl.integ.eePath
+import ee.design.KotlinGenerator
+import ee.lang.integ.eePath
 
 fun main(args: Array<String>) {
     val generator = KotlinGenerator(model())

@@ -1,4 +1,0 @@
-dependencies {
-    compile project(':ee-common')
-    compile project(':ee-dsl_data')
-}
