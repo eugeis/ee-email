@@ -4,6 +4,6 @@ import ee.design.gen.DesignKotlinGenerator
 import ee.lang.integ.eePath
 
 fun main(args: Array<String>) {
-    val generator = DesignKotlinGenerator(model())
+    val generator = DesignKotlinGenerator(Email)
     generator.generate(eePath)
 }
