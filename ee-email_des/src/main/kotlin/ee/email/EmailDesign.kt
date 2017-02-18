@@ -13,14 +13,14 @@ object Email : Comp({ artifact("ee-email").namespace("ee.email") }) {
         }
 
         object Forwarding : Basic() {
-            val from = prop { type(EmailAddress).replaceable(false) }
-            val to = prop { type(n.List.GT(EmailAddress)).replaceable(false) }
+            val from = prop { type(EmailAddress) }
+            val to = prop { type(n.List.GT(EmailAddress)) }
         }
 
         object EmailDomain : Basic() {
             val name = prop { replaceable(false) }
-            val accounts = prop { type(n.List.GT(EmailAddress)).replaceable(false) }
-            val forwardings = prop { type(n.List.GT(Forwarding)).replaceable(false) }
+            val accounts = prop { type(n.List.GT(EmailAddress)) }
+            val forwardings = prop { type(n.List.GT(Forwarding)) }
             val path = prop { type(n.Path) }
         }
     }
