@@ -20,31 +20,15 @@ open class EmailAddress {
 }
 
 
-open class Forwarding {
-    val from: EmailAddress
-    val to: MutableList<Forwarding>
-
-
-    constructor(from: EmailAddress = EmailAddress.EMPTY, to: MutableList<Forwarding> = arrayListOf()) {
-        this.from = from
-        this.to = to
-    }
-
-    companion object {
-        val EMPTY = Forwarding()
-    }
-}
-
-
 open class EmailDomain {
     val name: String
-    val accounts: MutableList<Forwarding>
-    val forwardings: MutableList<Forwarding>
+    val accounts: MutableList<EmailAddress>
+    val forwardings: MutableList<EmailAddress>
     val path: Path
 
 
-    constructor(name: String = "", accounts: MutableList<Forwarding> = arrayListOf(), 
-                forwardings: MutableList<Forwarding> = arrayListOf(), path: Path = Paths.get("")) {
+    constructor(name: String = "", accounts: MutableList<EmailAddress> = arrayListOf(), 
+                forwardings: MutableList<EmailAddress> = arrayListOf(), path: Path = Paths.get("")) {
         this.name = name
         this.accounts = accounts
         this.forwardings = forwardings
@@ -53,6 +37,22 @@ open class EmailDomain {
 
     companion object {
         val EMPTY = EmailDomain()
+    }
+}
+
+
+open class Forwarding {
+    val from: EmailAddress
+    val to: MutableList<EmailAddress>
+
+
+    constructor(from: EmailAddress = EmailAddress.EMPTY, to: MutableList<EmailAddress> = arrayListOf()) {
+        this.from = from
+        this.to = to
+    }
+
+    companion object {
+        val EMPTY = Forwarding()
     }
 }
 
