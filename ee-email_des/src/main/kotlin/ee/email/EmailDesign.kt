@@ -21,7 +21,6 @@ object Email : Comp({ artifact("ee-email").namespace("ee.email") }) {
             val name = prop { replaceable(false) }
             val accounts = prop { type(n.List.GT(EmailAddress)) }
             val forwardings = prop { type(n.List.GT(Forwarding)) }
-            val path = prop { type(n.Path) }
         }
     }
 }

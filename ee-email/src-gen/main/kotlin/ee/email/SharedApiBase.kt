@@ -1,8 +1,5 @@
 package ee.email
 
-import java.nio.file.Path
-import java.nio.file.Paths
-
 
 
 
@@ -23,16 +20,14 @@ open class EmailAddress {
 open class EmailDomain {
     val name: String
     val accounts: MutableList<EmailAddress>
-    val forwardings: MutableList<EmailAddress>
-    val path: Path
+    val forwardings: MutableList<Forwarding>
 
 
     constructor(name: String = "", accounts: MutableList<EmailAddress> = arrayListOf(), 
-                forwardings: MutableList<EmailAddress> = arrayListOf(), path: Path = Paths.get("")) {
+                forwardings: MutableList<Forwarding> = arrayListOf()) {
         this.name = name
         this.accounts = accounts
         this.forwardings = forwardings
-        this.path = path
     }
 
     companion object {
