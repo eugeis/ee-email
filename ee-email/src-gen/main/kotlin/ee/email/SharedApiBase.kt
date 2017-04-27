@@ -23,12 +23,12 @@ open class EmailAddress {
 open class EmailDomain {
     val name: String
     val accounts: MutableList<EmailAddress>
-    val forwardings: MutableList<EmailAddress>
+    val forwardings: MutableList<Forwarding>
     val path: Path
 
 
     constructor(name: String = "", accounts: MutableList<EmailAddress> = arrayListOf(), 
-                forwardings: MutableList<EmailAddress> = arrayListOf(), path: Path = Paths.get("")) {
+                forwardings: MutableList<Forwarding> = arrayListOf(), path: Path = Paths.get("")) {
         this.name = name
         this.accounts = accounts
         this.forwardings = forwardings
