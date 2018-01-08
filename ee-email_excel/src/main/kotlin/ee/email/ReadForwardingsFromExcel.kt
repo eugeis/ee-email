@@ -2,15 +2,16 @@ package ee.email
 
 import ee.excel.Excel
 import ee.excel.get
+import java.nio.file.Path
 import java.util.*
 
-class ReadForwardingsFromExcel(val file: String, val sheets: List<String>) {
+class ReadForwardingsFromExcel(val filePath: Path, val sheets: List<String>) {
 
     fun load(): List<Forwarding> {
 
         val ret = ArrayList<Forwarding>()
 
-        val excel = Excel.open(file)
+        val excel = Excel.open(filePath)
 
         sheets.map { excel.getSheet(it) }.forEach { sheet ->
             var toOfLastForwarding = ArrayList<EmailAddress>()
