@@ -1,8 +1,6 @@
 package ee.email
 
 
-
-
 open class EmailAddress {
     val address: String
 
@@ -23,8 +21,8 @@ open class EmailDomain {
     val forwardings: MutableList<Forwarding>
 
 
-    constructor(name: String = "", accounts: MutableList<EmailAddress> = arrayListOf(), 
-                forwardings: MutableList<Forwarding> = arrayListOf()) {
+    constructor(name: String = "", accounts: MutableList<EmailAddress> = arrayListOf(),
+        forwardings: MutableList<Forwarding> = arrayListOf()) {
         this.name = name
         this.accounts = accounts
         this.forwardings = forwardings
