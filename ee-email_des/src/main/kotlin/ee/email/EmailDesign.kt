@@ -1,6 +1,6 @@
 package ee.email
 
-import ee.design.Basic
+import ee.lang.Basic
 import ee.design.Comp
 import ee.design.Module
 import ee.lang.GT
