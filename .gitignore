@@ -20,3 +20,14 @@ gradle-app.setting
 /ee-email/out/production/classes/
 /ee-email_des/out/production/classes/
 /ee-email_excel/out/production/classes/
+/ee-email_excel/.settings/
+/ee-email_excel/.classpath
+/ee-email_excel/.project
+/ee-email_des/.settings/
+/ee-email_des/.classpath
+/ee-email_des/.project
+/ee-email/.settings/
+/ee-email/.classpath
+/ee-email/.project
+/.settings/
+/.classpath
